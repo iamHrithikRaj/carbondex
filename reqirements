@@ -1,0 +1,54 @@
+Requirements
+
+-- API that provides data on the solar energy potential of building roofs throughout the city. 
+# 15-20% Solar -> Electric
+	-- Elevation building 
+	-- 
+# Watt of Power is produced
+	-- Kaggle dataset 
+	-- Machine Learning
+
+Question to be answered : solar energy potential of building roofs -- 1 sqm 15-20% ??? energy
+
+-- The API should also provide data on how alternative energy sources could reduce a particular building’s emissions footprint. 
+	-- Comparisons
+		| -- Then(When using conventional power ) v/s Now (When 				using solar power )
+	-- Quantify
+		| -- reduced power consumtion or reduced emission footprint
+		| -- 
+
+-- simple web interface (Interactive Form) for a building owner to search for their property to view data on the solar potential of their roof and the impact on the emissions associated with their building’s energy use.
+
+
+-- This project will require intermediate experience with data analysis packages, GIS(GeoPandas), and building web service APIs with either Python.
+
+
+
+GeoPandas
+Pandas
+Numpy
+SKLearn
+React
+Flask
+MongoDB
+REST
+
+Links - https://learn.arcgis.com/en/arcgis-book/chapter4/#learn-more
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
