@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-./new-frontend/solar-view/node_modules
 /.pnp
 .pnp.js
 
