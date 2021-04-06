@@ -4,15 +4,15 @@ import { motion } from 'framer-motion';
 // import home from '../images/home.svg'
 import sun from '../images/sun.svg';
 import town from '../images/town.svg';
-
-
+import { Link } from 'react-router-dom';
+import '../form.css';
 
 const Section = styled.section`
 height:100vh;
 display: flex;
 justify-content:center;
 align-items:center;
-background:#131313;
+/* background:#131313; */
 overflow-y:hidden;
 `;
 
@@ -93,7 +93,12 @@ const Hero = () => {
     }
 
     return (
+        
         <Section>
+            <div className="stars"></div>
+            <div className="star2"></div>
+            <div className="star3"></div>
+
             <Container>
                 <Columnleft>
                     <motion.h1
@@ -107,13 +112,15 @@ const Hero = () => {
                         animate='visible'
                         transition={{ duration: 1 }}
                     >Journey to save our planet</motion.p>
-                    <Button
-                        whileHover={{ scale: 1.05 ,background:'transparent',color:'pink'}}
-                        whileTap={{ scale: 0.95, backgroundColor: '#67F6E7', border: 'none', color: 'pink' }}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1, transition: { duration: 1.5 } }}
+                    <Link to="/form">
+                        <Button
+                            whileHover={{ scale: 1.05, background: 'transparent', color: 'pink' }}
+                            whileTap={{ scale: 0.95, backgroundColor: '#67F6E7', border: 'none', color: 'pink' }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1, transition: { duration: 1.5 } }}
 
-                    >Get Started</Button>
+                        >Get Started</Button>
+                    </Link>
                 </Columnleft>
                 <Columnright>
                     <Image src={sun} alt='sun' whileTap={{ scale: 0.9 }} drag={true} dragConstraints={{ left: 0, right: 250, top: 0, bottom: 50 }} initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0, transition: { duration: 1 } }} />
@@ -125,3 +132,8 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+     
+
+
