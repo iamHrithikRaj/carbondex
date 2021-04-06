@@ -4,6 +4,7 @@ import Card from "./Card.js";
 import firstImage from "../assets/first.png";
 import secondImage from "../assets/second.png";
 import thirdImage from "../assets/third.png";
+import House from "../assets/masked-house.png"
 
 const About = () => {
   const props = [
@@ -64,27 +65,25 @@ const About = () => {
           </p>
         </div>
         <div className={style.cardContainer}>
-            <div className={style.left}>
-                <h1>15 Glendale Ave, Somerville, MA 02144, USA</h1>
-                <h2>1,479 hours of usable sunlight per year</h2>
-                <p>Based on day-to-day analysis of weather patterns</p>
-                <a href="/">Check My Roof</a>
-            </div>
-            <div className={style.right}>
-                
-            </div>
+          <div className={style.left}>
+            <h1>15 Glendale Ave, Somerville, MA 02144, USA</h1>
+            <h2>1,479 hours of usable sunlight per year</h2>
+            <div className={style.para}>Based on day-to-day analysis of weather patterns</div>
+            <h2>497 sq feet available for solar panels</h2>
+            <div className={style.para}>Based on 3D modeling of roof and nearby trees</div>
+            <h3>$18,000 savings</h3>
+            <h4>Estimated net savings for roof over 20 years</h4>
+
+            <a href="/">Check My Roof</a>
+          </div>
+          <div className={style.right}>
+            <img src={House} / >
+          </div>
         </div>
       </section>
 
 
       <section>
-        <div className={style.submain}>
-          <h1>How Solar View works?</h1>
-          <p>
-            Your own personalized solar savings estimator, powered by Google
-            Earth imagery
-          </p>
-        </div>
       </section>
 
 
