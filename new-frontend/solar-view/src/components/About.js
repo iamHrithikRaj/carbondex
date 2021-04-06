@@ -5,6 +5,8 @@ import firstImage from "../assets/first.png";
 import secondImage from "../assets/second.png";
 import thirdImage from "../assets/third.png";
 import House from "../assets/masked-house.png"
+import prakul from "../assets/prakul.jpeg"
+import hrithik from "../assets/hrithik.jpeg"
 
 const About = () => {
   const props = [
@@ -77,13 +79,36 @@ const About = () => {
             <a href="/">Check My Roof</a>
           </div>
           <div className={style.right}>
-            <img src={House} / >
+            <img src={House} />
           </div>
         </div>
       </section>
 
 
       <section>
+        <div className={style.team}>
+          <h2 className={style.firsth2}>Our Team</h2>
+          <p>Try to hover over their images</p>
+          <div className={style.line}></div>
+          <div className={style.container}>
+            <div className={style.box}>
+              <div className={style.imgBx}>
+                <img src={prakul} alt="" />
+              </div>
+              <div className={style.content}>
+                <h2>Prakul Tiwari <br /> <span>Senior Developer</span></h2>
+              </div>
+            </div>
+            <div className={style.box}>
+              <div className={style.imgBx}>
+                <img src={hrithik} alt="" />
+              </div>
+              <div className={style.content}>
+                <h2>Hrithik Raj <br /> <span>Junior Developer</span></h2>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
 
