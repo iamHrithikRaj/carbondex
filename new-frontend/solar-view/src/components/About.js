@@ -7,7 +7,8 @@ import thirdImage from "../assets/third.png";
 import House from "../assets/masked-house.png"
 import prakul from "../assets/prakul.jpeg"
 import hrithik from "../assets/hrithik.jpeg"
-import sun from "../assets/sun.svg"
+
+//TODO: Add github and linkedin acc in cr
 
 const About = () => {
   const props = [
@@ -69,7 +70,7 @@ const About = () => {
         </div>
         <div className={style.cardContainer}>
           <div className={style.left}>
-            <h1>15 Glendale Ave, Somerville, MA 02144, USA</h1>
+            <h1>House No. 1003</h1>
             <h2>1,479 hours of usable sunlight per year</h2>
             <div className={style.para}>
               
@@ -98,8 +99,9 @@ const About = () => {
               <div className={style.imgBx}>
                 <img src={prakul} alt="" />
               </div>
+            
               <div className={style.content}>
-                <h2>Prakul Tiwari <br /> <span>Senior Developer</span></h2>
+                <h2>Prakul Tiwari <br /></h2>
               </div>
             </div>
             <div className={style.box}>
@@ -107,7 +109,7 @@ const About = () => {
                 <img src={hrithik} alt="" />
               </div>
               <div className={style.content}>
-                <h2>Hrithik Raj <br /> <span>Junior Developer</span></h2>
+                <h2>Hrithik Raj <br /></h2>
               </div>
             </div>
           </div>
