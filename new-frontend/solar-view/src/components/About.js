@@ -7,6 +7,7 @@ import thirdImage from "../assets/third.png";
 import House from "../assets/masked-house.png"
 import prakul from "../assets/prakul.jpeg"
 import hrithik from "../assets/hrithik.jpeg"
+import sun from "../assets/sun.svg"
 
 const About = () => {
   const props = [
@@ -63,14 +64,16 @@ const About = () => {
             Solar savings are calculated using roof size and shape, shaded roof
             areas, local weather, local electricity prices, solar costs, and
             estimated incentives over time. Using a sample address, take a look
-            at the detailed estimate Project Sunroof can give you.
+            at the detailed estimate Solar View can give you.
           </p>
         </div>
         <div className={style.cardContainer}>
           <div className={style.left}>
             <h1>15 Glendale Ave, Somerville, MA 02144, USA</h1>
             <h2>1,479 hours of usable sunlight per year</h2>
-            <div className={style.para}>Based on day-to-day analysis of weather patterns</div>
+            <div className={style.para}>
+              
+              Based on day-to-day analysis of weather patterns</div>
             <h2>497 sq feet available for solar panels</h2>
             <div className={style.para}>Based on 3D modeling of roof and nearby trees</div>
             <h3>$18,000 savings</h3>
@@ -79,7 +82,7 @@ const About = () => {
             <a href="/">Check My Roof</a>
           </div>
           <div className={style.right}>
-            <img src={House} />
+            <img src={House} alt="" />
           </div>
         </div>
       </section>

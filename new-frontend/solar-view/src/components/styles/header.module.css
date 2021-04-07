@@ -60,17 +60,20 @@
 }
 
 .heading{
-   font-size: 3rem;
-   font-weight: 400;
+   font-size: 5rem;
+   font-weight: 200;
 }
 
 .description{
   text-align: center;
 }
+
 .description p{
   padding:10px;
 }
 
 .description hr{
-  border: 0.1px black solid;
+    height: 0px;
+    border: none;
+    border-top: 0.5px solid black;
 }

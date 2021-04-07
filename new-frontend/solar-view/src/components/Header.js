@@ -4,7 +4,7 @@ import style from "./styles/header.module.css";
 const Header = () => {
   return (
     <div className={style.header}>
-      <h1 className={style.heading}>Solar View</h1>
+      <h1 className={style.heading}>SOLAR VIEW</h1>
       <div className={style.form}>
         <input className={style.input} />
         <a className={style.button} href="/">
