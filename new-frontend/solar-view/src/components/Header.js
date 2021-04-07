@@ -7,7 +7,7 @@ const Header = () => {
       <h1 className={style.heading}>SOLAR VIEW</h1>
       <div className={style.form}>
         <input className={style.input} />
-        <a className={style.button} href="/">
+        <a className={style.button} href="/calculator">
           Check My Roof
         </a>
       </div>

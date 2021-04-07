@@ -15,9 +15,17 @@ const Dashboard = () => {
    }
 
     return (
-      <div >
-        <Iframe iframe={iframe} />
-      </div>
+      <>
+        <div >
+          <Iframe iframe={iframe} />
+        </div>
+        <div className={style.form}>
+          <label>Total rooftop area(in sq metre):</label>
+          <input type='number' />
+          <label>% of rooftop area available:</label>
+          <input type='number' />
+        </div>
+      </>
     );
 }
  

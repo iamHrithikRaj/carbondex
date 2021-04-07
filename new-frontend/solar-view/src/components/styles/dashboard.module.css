@@ -1,8 +1,31 @@
 .map{
+    position: absolute;
     height: 50vh;
+    width: 100vw;
+    z-index: -1;
 }
-
-
+.form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: white;
+    width: 400px;
+    margin-left: 60px;
+    border: 1px solid black;
+    z-index: 9;
+}
+.form label{
+    font-size:20px;
+    margin: 20px;
+}
+.form input{
+    width:20vw;
+    height:30px;
+    font-size:20px;
+    outline: none;
+}
 
 
 
