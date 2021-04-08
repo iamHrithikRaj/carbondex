@@ -4,8 +4,8 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Creators from "./components/Creators";
 import Footer from "./components/Footer";
-import Calculator from "./components/Dashboard"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
 
 const App = () => {
   const [state,setState] = useState("");
@@ -19,7 +19,8 @@ const App = () => {
           <Footer />
         </Route>
         <Route exact path="/calculator">
-          <Calculator state={state}/>
+          <Dashboard state={state}/>
+          <Footer/>
         </Route>
       </Switch>
     </Router>
