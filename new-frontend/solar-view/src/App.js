@@ -13,15 +13,15 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="">
-          <Header state={state} setState={setState}/>
+        <Route path="https://iamhrithikraj.github.io/SolarView/">
+          <Header state={state} setState={setState} />
           <About />
           <Creators />
           <Footer />
         </Route>
         <Route exact path="/calculator">
-          <Dashboard state={state}/>
-          <Footer/>
+          <Dashboard state={state} />
+          <Footer />
         </Route>
       </Switch>
     </Router>
