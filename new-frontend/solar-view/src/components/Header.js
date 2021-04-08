@@ -1,12 +1,17 @@
 import React from "react";
 import style from "./styles/header.module.css";
 
-const Header = () => {
+const Header = ({state, setState}) => {
+
+  const handleInput = (e) =>{
+    setState(e.target.value)
+  }
+
   return (
     <div className={style.header}>
       <h1 className={style.heading}>SOLAR VIEW</h1>
       <div className={style.form}>
-        <input className={style.input} />
+        <input className={style.input} onChange={handleInput}/>
         <a className={style.button} href="/calculator">
           Check My Roof
         </a>
