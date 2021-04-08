@@ -13,7 +13,7 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route  path="/">
           <Header state={state} setState={setState}/>
           <About />
           <Creators />
