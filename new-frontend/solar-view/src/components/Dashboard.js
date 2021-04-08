@@ -4,7 +4,6 @@ import { useState } from "react";
 import co2 from "../assets/ic_co2.png";
 import car from "../assets/ic_car.png";
 import tree from "../assets/ic_tree.png";
-import calculator from "../data/calculator.js"
 
 
 
