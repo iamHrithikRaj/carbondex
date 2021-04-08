@@ -13,7 +13,7 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="https://iamhrithikraj.github.io/SolarView/">
+        <Route path="SolarView/">
           <Header state={state} setState={setState} />
           <About />
           <Creators />
