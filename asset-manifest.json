@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/solar-view/static/css/main.27341b93.chunk.css",
-    "main.js": "/solar-view/static/js/main.127b28fe.chunk.js",
-    "main.js.map": "/solar-view/static/js/main.127b28fe.chunk.js.map",
+    "main.js": "/solar-view/static/js/main.efd82c4a.chunk.js",
+    "main.js.map": "/solar-view/static/js/main.efd82c4a.chunk.js.map",
     "runtime-main.js": "/solar-view/static/js/runtime-main.1ad2df19.js",
     "runtime-main.js.map": "/solar-view/static/js/runtime-main.1ad2df19.js.map",
-    "static/js/2.f17d028a.chunk.js": "/solar-view/static/js/2.f17d028a.chunk.js",
-    "static/js/2.f17d028a.chunk.js.map": "/solar-view/static/js/2.f17d028a.chunk.js.map",
+    "static/js/2.c20e5c0e.chunk.js": "/solar-view/static/js/2.c20e5c0e.chunk.js",
+    "static/js/2.c20e5c0e.chunk.js.map": "/solar-view/static/js/2.c20e5c0e.chunk.js.map",
     "static/js/3.770ab268.chunk.js": "/solar-view/static/js/3.770ab268.chunk.js",
     "static/js/3.770ab268.chunk.js.map": "/solar-view/static/js/3.770ab268.chunk.js.map",
     "index.html": "/solar-view/index.html",
     "static/css/main.27341b93.chunk.css.map": "/solar-view/static/css/main.27341b93.chunk.css.map",
-    "static/js/2.f17d028a.chunk.js.LICENSE.txt": "/solar-view/static/js/2.f17d028a.chunk.js.LICENSE.txt",
+    "static/js/2.c20e5c0e.chunk.js.LICENSE.txt": "/solar-view/static/js/2.c20e5c0e.chunk.js.LICENSE.txt",
     "static/media/hrithik.227bc480.jpeg": "/solar-view/static/media/hrithik.227bc480.jpeg",
     "static/media/masked-house.3e63ddf8.png": "/solar-view/static/media/masked-house.3e63ddf8.png",
     "static/media/prakul.58f7f326.jpeg": "/solar-view/static/media/prakul.58f7f326.jpeg",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1ad2df19.js",
-    "static/js/2.f17d028a.chunk.js",
+    "static/js/2.c20e5c0e.chunk.js",
     "static/css/main.27341b93.chunk.css",
-    "static/js/main.127b28fe.chunk.js"
+    "static/js/main.efd82c4a.chunk.js"
   ]
 }
