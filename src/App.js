@@ -13,13 +13,13 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact href="/">
+        <Route exact path="/">
           <Header state={state} setState={setState} />
           <About />
           <Creators />
           <Footer />
         </Route>
-        <Route exact href="solar-view/calculator">
+        <Route exact path="/calculator">
           <Dashboard state={state} />
           <Footer />
         </Route>
