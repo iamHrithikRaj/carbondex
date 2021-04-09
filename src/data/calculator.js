@@ -1,9 +1,9 @@
 // function calculate() {
 //   budget_additionally = "";
 
-// //   var state = $("#state").val();
-// //   var state_name = $("#state option:selected").text();
-// //   var customer_type = $("#customer_type").val();
+//   //   var state = $("#state").val();
+//   //   var state_name = $("#state option:selected").text();
+//   //   var customer_type = $("#customer_type").val();
 //   var category = get_state_category(state);
 
 //   checkbox_selected = "Roof Top Area";
@@ -213,3 +213,4 @@
 
 //   return irradiation;
 // }
+ 
