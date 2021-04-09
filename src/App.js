@@ -11,7 +11,7 @@ const App = () => {
   const [state, setState] = useState("");
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/">
           <Header state={state} setState={setState} />
