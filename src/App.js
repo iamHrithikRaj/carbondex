@@ -1,30 +1,27 @@
 import "./App.css";
-import { useState } from "react";
+// import { useState } from "react";
 import Header from "./components/Header";
 import About from "./components/About";
 import Creators from "./components/Creators";
 import Footer from "./components/Footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 
 const App = () => {
-  const [state, setState] = useState("");
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path={process.env.PUBLIC_URL + "/"}>
-          <Header state={state} setState={setState} />
+        <Route exact path='/'>
+          <Header />
           <About />
           <Creators />
           <Footer />
         </Route>
-        <Route exact path={process.env.PUBLIC_URL + "/calculator"}>
-          <Dashboard state={state} />
+        <Route exact path='/calculator'>
+          <Dashboard />
           <Footer />
         </Route>
       </Switch>
-    </Router>
   );
 };
 
