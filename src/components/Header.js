@@ -12,7 +12,7 @@ const Header = ({state, setState}) => {
       <h1 className={style.heading}>SOLAR VIEW</h1>
       <div className={style.form}>
         <input className={style.input} onChange={handleInput}/>
-        <a className={style.button} href="/solar-view/calculator">
+        <a className={style.button} href="/calculator">
           Check My Roof
         </a>
       </div>

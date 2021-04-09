@@ -13,13 +13,13 @@ const App = () => {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path="/">
+        <Route exact path={process.env.PUBLIC_URL + "/"}>
           <Header state={state} setState={setState} />
           <About />
           <Creators />
           <Footer />
         </Route>
-        <Route exact path="/solar-view/calculator">
+        <Route exact path={process.env.PUBLIC_URL + "/calculator"}>
           <Dashboard state={state} />
           <Footer />
         </Route>
