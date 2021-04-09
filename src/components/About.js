@@ -80,7 +80,7 @@ const About = () => {
             <h3>$18,000 savings</h3>
             <h4>Estimated net savings for roof over 20 years</h4>
 
-            <a href="/calculator">Check My Roof</a>
+            <a href="/solar-view/calculator">Check My Roof</a>
           </div>
           <div className={style.right}>
             <img src={House} alt="" />
