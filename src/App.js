@@ -19,7 +19,7 @@ const App = () => {
           <Creators />
           <Footer />
         </Route>
-        <Route exact href="/calculator">
+        <Route exact href="solar-view/calculator">
           <Dashboard state={state} />
           <Footer />
         </Route>
