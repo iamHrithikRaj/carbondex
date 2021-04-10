@@ -1,4 +1,4 @@
-# Solar View 
+# <a href="https://iamhrithikraj.github.io/solar-view/#/">Solar View</a>
 <p align="center">
   <img src="logo.jpg" style="border-radius:50%"/>
 </p>
