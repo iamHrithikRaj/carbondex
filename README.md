@@ -1,5 +1,5 @@
 # Solar View 
-<p align="center">
+<p align="center" border-radius="50%">
   <img src="logo.jpg" />
 </p>
  
