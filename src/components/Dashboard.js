@@ -5,8 +5,6 @@ import co2 from "../assets/ic_co2.png";
 import car from "../assets/ic_car.png";
 import tree from "../assets/ic_tree.png";
 
-
-
 const Dashboard = ({ state }) => {
   // eslint-disable-next-line
   const [info, setInfo] = useState({
@@ -18,8 +16,6 @@ const Dashboard = ({ state }) => {
     tree: "70.9",
     cars: "0.6",
   });
-
-  
 
   const iframe =
     '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14017.960361251766!2d77.343446!3d28.55504255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1617819014824!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
@@ -55,6 +51,23 @@ const Dashboard = ({ state }) => {
       <div className={style.secondContainer}>
         <section className={style.gridContainer}>
           <div className={style.gridItem1}>
+            <h1>YOUR ESTIMATED ROOF TOP AREA</h1>
+            <p>
+              We use your roof top area to estimate how much space is available
+              for panel installation.
+            </p>
+            <input placeholder="Example: 123 Sq. Feet" />
+          </div>
+
+          <div className={style.gridItem2}>
+            <h1>YOUR ESTIMATED PERCENTAGE ROOF TOP AREA</h1>
+            <p>
+              We use your roof top area to estimated percentage how much space
+              is available for panel installation.
+            </p>
+            <input placeholder="Example: 20%" />
+          </div>
+          <div className={style.gridItem3}>
             <h1>YOUR AVERAGE MONTHLY ELECTRIC BILL</h1>
             <p>
               We use your bill to estimate how much electricity you use based on
@@ -75,7 +88,7 @@ const Dashboard = ({ state }) => {
             </select>
           </div>
 
-          <div className={style.gridItem2}>
+          <div className={style.gridItem4}>
             <h1>YOUR RECOMMENDED SOLAR INSTALLATION SIZE</h1>
             <p>
               This size will cover about 94% of your electricity usage. Solar
@@ -84,7 +97,7 @@ const Dashboard = ({ state }) => {
             <h2>{info.size} Kw</h2>
           </div>
 
-          <div className={style.gridItem3}>
+          <div className={style.gridItem5}>
             <h1>YOUR POTENTIAL ENVIRONMENTAL IMPACT</h1>
             <p>
               Estimated annual environmental impact of the recommended solar

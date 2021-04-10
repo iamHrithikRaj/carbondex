@@ -1,216 +1,203 @@
-// function calculate() {
-//   budget_additionally = "";
+export function calculate(state, area, area_pert, electricity) {
+  let budget_additionally = "";
 
-//   //   var state = $("#state").val();
-//   //   var state_name = $("#state option:selected").text();
-//   //   var customer_type = $("#customer_type").val();
-//   var category = get_state_category(state);
+  //   var state = $("#state").val();
+  //   var state_name = $("#state option:selected").text();
+  //   var customer_type = $("#customer_type").val();
+  let category = get_state_category(state);
 
-//   checkbox_selected = "Roof Top Area";
-//   plant_size = calculate_plant_size_area();
-//   if (plant_size > 500) {
-//     message =
-//       "As per Roof Top Area ,capacity found is beyond 500kW. Maximum limit of capacity is 500kW";
-//     new Messi(message, {
-//       title: "Error",
-//       titleClass: "anim error",
-//       modal: true,
-//       buttons: [{ id: 0, label: "Ok", val: "X" }],
-//     });
-//     return false;
-//   }
+  let checkbox_selected = "Roof Top Area";
+  let plant_size = calculate_plant_size_area();
+  if (plant_size > 500) {
+    document.alert("plant size limit exceeded");
+  }
 
-//   var cost1 = get_benchmark(plant_size, category);
-//   output_without_subsidy = plant_size * cost1;
-//   output_without_subsidy = Number(output_without_subsidy).toFixed(0);
+  let cost1 = get_benchmark(plant_size, category);
+  let output_without_subsidy = plant_size * cost1;
+  output_without_subsidy = Number(output_without_subsidy).toFixed(0);
 
-//   //====
-//   irradiation = get_irradiation(state);
-//   generate = irradiation * 0.0036 * 1.1;
-//   generate = Number(generate).toFixed(1);
-//   output_electricity_annual = generate * plant_size * 300;
-//   output_electricity_annual = Number(output_electricity_annual).toFixed(0);
-//   output_electricity_lifetime = output_electricity_annual * 25;
-//   //---
+  //====
+  let irradiation = get_irradiation(state);
+  let generate = irradiation * 0.0036 * 1.1;
+  generate = Number(generate).toFixed(1);
+  let output_electricity_annual = generate * plant_size * 300;
+  output_electricity_annual = Number(output_electricity_annual).toFixed(0);
+  let output_electricity_lifetime = output_electricity_annual * 25;
+  //---
 
-//   //====CO2 and tree====
-//   value_a = output_electricity_lifetime * 0.82;
-//   value_b = 25 * 25;
-//   co2 = value_a / 1000;
-//   co2 = Number(co2).toFixed(0);
-//   tree = value_a / value_b;
-//   tree = Number(tree).toFixed(0);
-//   //-----
+  //====CO2 and tree====
+  let value_a = output_electricity_lifetime * 0.82;
+  let value_b = 25 * 25;
+  let co2 = value_a / 1000;
+  co2 = Number(co2).toFixed(0);
+  let tree = value_a / value_b;
+  tree = Number(tree).toFixed(0);
+  //-----
 
-//   //===========
-//   output_electricity_unit = $("#electricity_txt").val();
-//   output_saving_annually = output_electricity_annual * output_electricity_unit;
-//   output_saving_monthly =
-//     (output_electricity_annual / 12) * output_electricity_unit;
-//   output_saving_monthly = Number(output_saving_monthly).toFixed(0);
-//   output_saving_lifetime = output_saving_annually * 25;
-//   //----------
+  //===========
+  let output_electricity_unit = electricity;
+  let output_saving_annually =
+    output_electricity_annual * output_electricity_unit;
+  let output_saving_monthly =
+    (output_electricity_annual / 12) * output_electricity_unit;
+  output_saving_monthly = Number(output_saving_monthly).toFixed(0);
+  let output_saving_lifetime = output_saving_annually * 25;
+  //----------
+}
 
-//   $(".output").html("");
-//   $("#output_state").html(state_name);
-//   $("#output_irradiation").html(irradiation);
-//   $("#output_generate").html(generate);
+export function calculate_plant_size_area(roof_area, roof_area_percentage) {
+  let capacity = (roof_area * roof_area_percentage) / 1000;
+  //capacity = Number(capacity).toFixed(0); //modified on 31Jan2018
+  capacity = Number(capacity).toFixed(1);
+  return capacity;
+}
 
-//   $("#output_choosen").html(checkbox_selected); //1
-//   $("#output_budget_additionally").html(budget_additionally); //1
+export const data = [
+  { category: "G", rangeFrom: "1", rangeTo: "1", cost: "47" },
+  { category: "I", rangeFrom: "1", rangeTo: "1", cost: "52" },
+  { category: "N", rangeFrom: "1", rangeTo: "1", cost: "52" },
+  { category: "S", rangeFrom: "1", rangeTo: "1", cost: "52" },
+  { category: "G", rangeFrom: "1", rangeTo: "2", cost: "43" },
+  { category: "I", rangeFrom: "1", rangeTo: "2", cost: "47" },
+  { category: "N", rangeFrom: "1", rangeTo: "2", cost: "47" },
+  { category: "S", rangeFrom: "1", rangeTo: "2", cost: "47" },
+  { category: "G", rangeFrom: "2", rangeTo: "3", cost: "42" },
+  { category: "I", rangeFrom: "2", rangeTo: "3", cost: "46" },
+  { category: "N", rangeFrom: "2", rangeTo: "3", cost: "46" },
+  { category: "S", rangeFrom: "2", rangeTo: "3", cost: "46" },
+  { category: "G", rangeFrom: "3", rangeTo: "10", cost: "41" },
+  { category: "I", rangeFrom: "3", rangeTo: "10", cost: "45" },
+  { category: "N", rangeFrom: "3", rangeTo: "10", cost: "45" },
+  { category: "S", rangeFrom: "3", rangeTo: "10", cost: "45" },
+  { category: "G", rangeFrom: "10", rangeTo: "100", cost: "38" },
+  { category: "I", rangeFrom: "10", rangeTo: "100", cost: "42" },
+  { category: "N", rangeFrom: "10", rangeTo: "100", cost: "42" },
+  { category: "S", rangeFrom: "10", rangeTo: "100", cost: "42" },
+  { category: "G", rangeFrom: "100", rangeTo: "500", cost: "36" },
+  { category: "I", rangeFrom: "100", rangeTo: "500", cost: "40" },
+  { category: "N", rangeFrom: "100", rangeTo: "500", cost: "40" },
+  { category: "S", rangeFrom: "100", rangeTo: "500", cost: "40" },
+];
 
-//   $("#output_size").html(plant_size); //2
-//   $("#bench_cost").html(benchmark); //2
-//   $("#output_without_subsidy").html(output_without_subsidy); //3
-//   $("#output_subsidy_heading").html(subsidy_for_heading); //4 //subsidy - old
-//   $("#output_subsidy").html(output_subsidy); //5
-//   $("#output_electricity_annual").html(output_electricity_annual); //6
-//   $("#output_electricity_lifetime").html(output_electricity_lifetime); //7
-//   $("#output_electricity_unit").html(output_electricity_unit); //8
-//   $("#output_saving_monthly").html(output_saving_monthly); //9
-//   $("#output_saving_annually").html(output_saving_annually); //10
-//   $("#output_saving_lifetime").html(output_saving_lifetime); //11
+export function get_benchmark(plant_size, category) {
+  plant_size = parseInt(plant_size);
+  let benchmark = 0;
+  for (let i = 0; i < data.length; i++) {
+    if (plant_size === 1) {
+      if (data[i].category === category && plant_size === data[i].rangeTo) {
+        let cost = data[i].cost;
+        benchmark = cost * 1000;
+      }
+    } else {
+      if (
+        data[i].category === category &&
+        plant_size > data[i].rangeFrom &&
+        plant_size <= data[i].rangeTo
+      ) {
+        let cost = data[i].cost;
+        benchmark = cost * 1000;
+      }
+    }
+  }
 
-//   $("#output_co2").html(co2);
-//   $("#output_tree").html(tree);
-// }
+  benchmark = Number(benchmark).toFixed(0);
+  return benchmark;
+}
 
-// function calculate_plant_size_area() {
-//   roof_area_txt = $("#roof_area_txt").val();
-//   radio_gp = $('input[name="radio_gp"]:checked').val();
-//   if (radio_gp == "1") {
-//     roof_area = 0.092903 * roof_area_txt;
-//   } else {
-//     roof_area = roof_area_txt;
-//   }
+export const data_state_catg = [
+  { state: "1", category: "S" },
+  { state: "2", category: "S" },
+  { state: "3", category: "G" },
+  { state: "4", category: "G" },
+  { state: "5", category: "S" },
+  { state: "6", category: "G" },
+  { state: "7", category: "G" },
+  { state: "8", category: "G" },
+  { state: "9", category: "G" },
+  { state: "10", category: "G" },
+  { state: "11", category: "N" },
+  { state: "12", category: "N" },
+  { state: "13", category: "N" },
+  { state: "14", category: "N" },
+  { state: "15", category: "N" },
+  { state: "16", category: "N" },
+  { state: "17", category: "N" },
+  { state: "18", category: "N" },
+  { state: "19", category: "G" },
+  { state: "20", category: "G" },
+  { state: "21", category: "G" },
+  { state: "22", category: "G" },
+  { state: "23", category: "G" },
+  { state: "24", category: "G" },
+  { state: "27", category: "G" },
+  { state: "28", category: "G" },
+  { state: "29", category: "G" },
+  { state: "30", category: "G" },
+  { state: "31", category: "I" },
+  { state: "32", category: "G" },
+  { state: "33", category: "G" },
+  { state: "34", category: "G" },
+  { state: "35", category: "I" },
+  { state: "36", category: "G" },
+  { state: "37", category: "G" },
+  { state: "38", category: "G" },
+];
 
-//   roof_area_percentage = $("#roof_area_percentage_txt").val();
-//   capacity = (roof_area * roof_area_percentage) / 1000;
-//   //capacity = Number(capacity).toFixed(0); //modified on 31Jan2018
-//   capacity = Number(capacity).toFixed(1);
-//   return capacity;
-// }
+export function get_state_category(state) {
+  let category = "";
+  for (let i = 0; i < data_state_catg.length; i++) {
+    if (data_state_catg[i].state === state) {
+      category = data_state_catg[i].category;
+    }
+  }
+  return category;
+}
 
-// function get_benchmark(plant_size, category) {
-//   var plant_size = parseInt(plant_size);
-//   benchmark = 0;
-//   for (i = 0; i < data.length; i++) {
-//     if (plant_size == 1) {
-//       if (data[i].category == category && plant_size == data[i].rangeTo) {
-//         cost = data[i].cost;
-//         benchmark = cost * 1000;
-//       }
-//     } else {
-//       if (
-//         data[i].category == category &&
-//         plant_size > data[i].rangeFrom &&
-//         plant_size <= data[i].rangeTo
-//       ) {
-//         cost = data[i].cost;
-//         benchmark = cost * 1000;
-//       }
-//     }
-//   }
+export const data_irradiation = [
+  { state: "1", irradiation: "1046.26" },
+  { state: "2", irradiation: "1046.26" },
+  { state: "3", irradiation: "1156.39" },
+  { state: "4", irradiation: "1156.39" },
+  { state: "5", irradiation: "1046.26" },
+  { state: "6", irradiation: "1156.39" },
+  { state: "7", irradiation: "1156.39" },
+  { state: "8", irradiation: "1266.52" },
+  { state: "9", irradiation: "1156.39" },
+  { state: "10", irradiation: "1156.39" },
+  { state: "11", irradiation: "1046.26" },
+  { state: "12", irradiation: "1046.26" },
+  { state: "13", irradiation: "1046.26" },
+  { state: "14", irradiation: "1046.26" },
+  { state: "15", irradiation: "1046.26" },
+  { state: "16", irradiation: "1046.26" },
+  { state: "17", irradiation: "1046.26" },
+  { state: "18", irradiation: "1046.26" },
+  { state: "19", irradiation: "1156.39" },
+  { state: "20", irradiation: "1156.39" },
+  { state: "21", irradiation: "1156.39" },
+  { state: "22", irradiation: "1266.52" },
+  { state: "23", irradiation: "1266.52" },
+  { state: "24", irradiation: "1266.52" },
+  { state: "25", irradiation: "1266.52" },
+  { state: "26", irradiation: "1266.52" },
+  { state: "27", irradiation: "1266.52" },
+  { state: "28", irradiation: "1266.52" },
+  { state: "29", irradiation: "1266.52" },
+  { state: "30", irradiation: "1266.52" },
+  { state: "31", irradiation: "1266.52" },
+  { state: "32", irradiation: "1266.52" },
+  { state: "33", irradiation: "1266.52" },
+  { state: "34", irradiation: "1266.52" },
+  { state: "35", irradiation: "1156.39" },
+  { state: "36", irradiation: "1266.52" },
+];
 
-//   benchmark = Number(benchmark).toFixed(0);
-//   return benchmark;
-// }
-
-// const data_state_catg = [
-//   { 1: "S" },
-//   { 2: "S" },
-//   { 3: "G" },
-//   { 4: "G" },
-//   { 5: "S" },
-//   { 6: "G" },
-//   { 7: "G" },
-//   { 8: "G" },
-//   { 9: "G" },
-//   { 10: "G" },
-//   { 11: "N" },
-//   { 12: "N" },
-//   { 13: "N" },
-//   { 14: "N" },
-//   { 15: "N" },
-//   { 16: "N" },
-//   { 17: "N" },
-//   { 18: "N" },
-//   { 19: "G" },
-//   { 20: "G" },
-//   { 21: "G" },
-//   { 22: "G" },
-//   { 23: "G" },
-//   { 24: "G" },
-//   { 27: "G" },
-//   { 28: "G" },
-//   { 29: "G" },
-//   { 30: "G" },
-//   { 31: "I" },
-//   { 32: "G" },
-//   { 33: "G" },
-//   { 34: "G" },
-//   { 35: "I" },
-//   { 36: "G" },
-//   { 37: "G" },
-//   { 38: "G" },
-// ];
-
-// function get_state_category(state) {
-//   for (let i = 0; i < data_state_catg.length; i++) {
-//     if (data_state_catg[i].state == state) {
-//       category = data_state_catg[i].category;
-//     }
-//   }
-
-//   return category;
-// }
-
-// const data_irradiation = [
-//   { 1: "1046.26" },
-//   { 2: "1046.26" },
-//   { 3: "1156.39" },
-//   { 4: "1156.39" },
-//   { 5: "1046.26" },
-//   { 6: "1156.39" },
-//   { 7: "1156.39" },
-//   { 8: "1266.52" },
-//   { 9: "1156.39" },
-//   { 10: "1156.39" },
-//   { 11: "1046.26" },
-//   { 12: "1046.26" },
-//   { 13: "1046.26" },
-//   { 14: "1046.26" },
-//   { 15: "1046.26" },
-//   { 16: "1046.26" },
-//   { 17: "1046.26" },
-//   { 18: "1046.26" },
-//   { 19: "1156.39" },
-//   { 20: "1156.39" },
-//   { 21: "1156.39" },
-//   { 22: "1266.52" },
-//   { 23: "1266.52" },
-//   { 24: "1266.52" },
-//   { 25: "1266.52" },
-//   { 26: "1266.52" },
-//   { 27: "1266.52" },
-//   { 28: "1266.52" },
-//   { 29: "1266.52" },
-//   { 30: "1266.52" },
-//   { 31: "1266.52" },
-//   { 32: "1266.52" },
-//   { 33: "1266.52" },
-//   { 34: "1266.52" },
-//   { 35: "1156.39" },
-//   { 36: "1266.52" },
-// ];
-
-// function get_irradiation(state) {
-//   for (i = 0; i < data_irradiation.length; i++) {
-//     if (data_irradiation[i].state == state) {
-//       irradiation = data_irradiation[i].irradiation;
-//     }
-//   }
-
-//   return irradiation;
-// }
- 
+export function get_irradiation(state) {
+  let irradiation = "";
+  for (let i = 0; i < data_irradiation.length; i++) {
+    if (data_irradiation[i].state === state) {
+      irradiation = data_irradiation[i].irradiation;
+    }
+  }
+  return irradiation;
+}

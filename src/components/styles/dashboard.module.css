@@ -41,7 +41,7 @@
 
 .secondContainer {
   margin: 180px 0;
-  height: 50vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -52,19 +52,17 @@
   width: 50%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 50px;
   grid-row-gap: 50px;
 }
 
-.gridItem1 {
-  grid-area: 1 / 1 / 2 / 2;
-}
 .gridContainer div p {
   text-align: center;
   padding: 10px;
   font-weight: 300;
 }
+
 .gridContainer div select {
   border: 1px #333 solid;
   background: #fff;
@@ -74,21 +72,54 @@
   font-size: large;
   padding: 10px;
 }
+
+.gridItem1 input {
+  border: 1px #333 solid;
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+  font-size: large;
+  padding: 20px;
+}
+
+.gridItem2 input {
+  border: 1px #333 solid;
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+  font-size: large;
+  padding: 20px;
+}
+
+.gridItem1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
 .gridItem2 {
   grid-area: 1 / 2 / 2 / 3;
 }
 .gridItem3 {
-  grid-area: 2 / 1 / 3 / 3;
+  grid-area: 2 / 1 / 3 / 2;
+}
+.gridItem4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.gridItem5 {
+  grid-area: 3 / 1 / 4 / 3;
 }
 
-.gridItem2 h2 {
+.gridItem2 h2,
+.gridItem4 h2 {
   font-size: 4rem;
   color: rgb(143, 143, 143);
 }
 
 .gridItem1,
 .gridItem2,
-.gridItem3 {
+.gridItem3,
+.gridItem4,
+.gridItem5 {
   text-align: center;
   padding: 20px;
   font-weight: 500;
@@ -105,7 +136,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items:center;
+  align-items: center;
   margin: 20px 0;
   justify-content: space-evenly;
 }
@@ -117,13 +148,23 @@
   align-items: center;
 }
 
-.images span{
-    font-size: 15px;
+.images span {
+  font-size: 15px;
 }
-.images h1{
-    font-size: 50px;
+.images h1 {
+  font-size: 50px;
 }
-.images p{
-    font-size: 100px;
-    font-weight: 100;
+.images p {
+  font-size: 100px;
+  font-weight: 100;
+}
+
+input {
+  border: 1px #333 solid;
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 30px;
+  font-size: large;
+  height: 30px;
 }

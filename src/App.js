@@ -9,18 +9,17 @@ import Dashboard from "./components/Dashboard";
 
 const App = () => {
   const [state, setState] = useState("");
-
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Switch>
-        <Route exact path={process.env.PUBLIC_URL + "/"}>
+        <Route exact path="/">
           <Header state={state} setState={setState} />
           <About />
           <Creators />
           <Footer />
         </Route>
-        <Route exact path={process.env.PUBLIC_URL + "/calculator"}>
-          <Dashboard state={state} />
+        <Route exact path="/calculator">
+          <Dashboard state={state}/>
           <Footer />
         </Route>
       </Switch>
