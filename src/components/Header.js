@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./styles/header.module.css";
-
+import { Link } from 'react-router-dom';
 const Header = ({state, setState}) => {
 
   const handleInput = (e) =>{
@@ -12,9 +12,9 @@ const Header = ({state, setState}) => {
       <h1 className={style.heading}>SOLAR VIEW</h1>
       <div className={style.form}>
         <input className={style.input} onChange={handleInput}/>
-        <a className={style.button} href="/calculator">
-          Check My Roof
-        </a>
+          <Link to="/calculator" className={style.button}>
+            Check My Roof
+          </Link>
       </div>
       <div className={style.description}>
         <p>Search for your home. Discover your solar savings potential.</p>
