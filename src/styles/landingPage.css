@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    body{
+      background-color:#90EE90;
+      width:100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .frame{
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      background-color:white;
+      height: 93vh;
+      width:90vw;
+      margin: 20px;
+      margin-top:30px;
+      border-radius:37px;
+      border: 1px solid;
+      border-image-source: linear-gradient(0deg, #000000, #000000), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    }
+    h1{
+      font-family:"Josefin Sans";
+      margin-top: 15vh;
+      color:#226E22;
+      font-size:50px;
+    }
+    .frame .line{
+      height:7px;
+      width:30vw;
+      background-color:#226E22;
+      align-self: flex-end;
+      margin-right: 50px;
+      border-radius: 10px;
+    }
+    img{
+      height:35vh;
+      width:50vw; 
+    }
+    .line1,.line2{
+      margin:20px;
+    }
+    button{
+      margin:0 15px;
+      height:40px;
+      width:30vw;
+      background-color:#91ED91;
+      font-family: "Josefin Sans";
+      font-size:25px;
+      color:#226E22;
+      border-radius:15px;
+    }
+    .back{
+      height:70px;
+      width:70px;
+      align-self: flex-start;
+      margin:20px;
+    }
+  }
